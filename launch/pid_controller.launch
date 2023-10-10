@@ -1,0 +1,4 @@
+<launch>
+  <node name="takeoff_publisher" pkg="rostopic" type="rostopic" args="pub /bebop/takeoff std_msgs/Empty '{}' --once"/>
+  <node name="pid" pkg="pid_controller" type="pid.py" output="screen" />
+</launch>
